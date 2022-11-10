@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lebenslauf</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="page cl">
+      <svg viewBox="0 0 210 297">
+        <path d="
+          M 0, 0
+          L 5, 0
+          L 5, 255
+          C 5 275, 84 275, 84 292
+          L 84, 297
+          L 0, 297
+          Z"/>
+      </svg>
+
+      <div class="content">
+        <div class="letterhead">
+          <span static-template="own-name"></span><br/>
+          <span static-template="own-street"></span><br/>
+          <span static-template="own-postal"></span><br/>
+          Telefon: <span static-template="own-phone"></span><br/>
+          Mobil: <span static-template="own-mobile"></span><br/>
+          E-Mail: <span static-template="own-email"></span><br/>
+        </div>
+
+        <div class="address-field">
+          <span static-template="address-hint1"></span><br/>
+          <span static-template="address-hint2"></span><br/>
+          <span static-template="address-hint3"></span><br/>
+          <span static-template="company-name"></span><br/>
+          <span static-template="contact-title"></span> <span static-template="contact-surname"></span> <span static-template="contact-name"></span><br/>
+          <span static-template="company-street"></span><br/>
+          <span static-template="company-postal"></span><br/>
+        </div>
+
+        <div class="date">
+          <br/>
+          <span dynamic-template="date"></span>
+        </div>
+
+        <div class="subject">
+          <br/>
+          <h2><span static-template="cl-subject"></span></h2>
+        </div>
+
+        <div class="letter">
+          <br/>
+          <span static-template="salutation-start"></span> <span static-template="contact-title"></span> <span static-template="contact-name"></span>,<br/>
+          <br/>
+          <span static-template="cl-text"></span>
+          <br/>
+          Mit freundlichen Grüßen<br/>
+          <span static-template="own-name"></span>
+        </div>
+      </div>
+
+      
+    <div class="page-number"><span dynamic-template="page-count"></span></div>
+    </div>
+
+    <div class="page cv">
+
+      <div class="col-left">
+        <h1>Lebenslauf<br/><span static-template="own-name"></span></h1>
+
+        <div class="content">
+          <div class="personal">
+            <h2>Persönliche Angaben</h2>
+            <div>Name</div><div><span static-template="own-name"></span></div>
+            <div>Geboren</div><div><span static-template="own-birth"></span></div>
+            <div>Anschrift</div><div><span static-template="own-street"></span><br/><span static-template="own-postal"></span></div>
+            <div>Telefon</div><div><span static-template="own-phone"></span></div>
+            <div>Mobil</div><div><span static-template="own-mobile"></span></div>
+            <div>E-Mail</div><div><span static-template="own-email"></span></div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="col-right">
+        
+        <div class="content"></div>
+
+        <div class="footer">
+          <div class="sign"><span static-template="own-name"></span></div>
+          <div class="date"><span static-template="own-place-of-residence"></span>, <span dynamic-template="date"></span></div>
+        </div>
+      
+      </div>
+
+      <div class="page-number"><span dynamic-template="page-count"></span></div>
+    </div>
+
+    <div class="attachment">
+      <img src="school_report.jpg" alt="school_report.jpg">
+    </div>
+  </body>
+  
+  <script src="script.js"></script>
+</html>

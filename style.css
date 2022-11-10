@@ -1,0 +1,260 @@
+/* General */
+
+:root {
+    --debug-color: var(--background-bright);
+    --background-dark: #222222;
+    --background-bright: #fdfdfd;
+    --font-color-dark: #222222;
+    --font-color-bright: #fdfdfd;
+    --font-color-faint: #2222227a;
+    --accent-color: #138ebe;
+
+    --font-size-small: 10pt;
+    --font-size-normal: 12pt;
+    --font-size-medium: 13pt;
+    --font-size-large: 20pt;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;    
+    background-color: var(--debug-color);
+    font-family: Calibri;
+    font-size: var(--font-size-normal);
+}
+
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+    font-size: var(--font-size-large);
+    color: var(--font-color-dark);
+}
+
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: var(--font-color-dark);
+}
+
+
+.page, .attachment {
+    margin: 0;
+    padding: 0;
+    width: 210mm;
+    height: 297mm;
+    background-color: var(--background-bright);
+    overflow: hidden;
+}
+
+
+.page {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.attachment > img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.page-number {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: var(--font-color-faint);
+    font-size: var(--font-size-small);
+}
+
+
+
+/* Anschreiben */
+
+.page.cl {
+    position: relative;
+}
+
+
+.page.cl > .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 2.5cm;
+    padding-right: 2.0cm;
+    padding-bottom: 2.0cm;
+    padding-top: 2.0cm;
+    box-sizing: border-box;
+}
+
+
+.page.cl > svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+.page.cl > svg > path {
+    width: 100%;
+    height: 100%;
+    fill: var(--background-dark);
+}
+
+
+.page.cl > .content > .date {
+    text-align: right;
+}
+
+.page.cl > .content .subject h2 {
+    font-size: var(--font-size-medium);
+}
+
+
+/* Lebenslauf */
+
+.page.cv {
+    position: relative;
+}
+
+.col-left {
+    background-color: var(--background-dark);
+    width: 371px;
+    height: 100%;
+    color: var(--font-color-bright);
+}
+
+
+.col-left > .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+}
+
+
+.col-left > h1 {
+    color: var(--font-color-bright);
+    font-weight: 400;
+    width: 100%;
+    margin-top: 28px;
+    padding: 4px 0 4px 0;
+    text-align: center;
+}
+
+
+.col-left h2 {
+    color: var(--font-color-bright);
+    font-size: var(--font-size-large);
+    margin: 16px 0 8px 0;
+    font-weight: 100;
+}
+
+
+.col-left .personal {
+    display: grid;
+    grid-template-columns: 82px auto;
+    row-gap: 2px;
+}
+
+
+.personal, .skill-block {
+    margin-top: 16px;
+    width: 100%;
+}
+
+.skill {
+    margin: 2px;
+}
+
+
+.col-left .personal h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+.skill {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.skill-points {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.skill-point {
+    width: 12px;
+    height: 12px;
+    margin: 1.2px;
+    border-radius: 50%;
+    border: 1px solid var(--font-color-bright);
+}
+
+
+.skill-point.filled {
+    background-color: var(--font-color-bright);
+}
+
+
+.col-right {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.page.cv .col-right > .content {
+    display: grid;
+    grid-template-columns: 150px auto;
+    margin: 32px;
+    row-gap: 16px;
+    width: auto;
+    box-sizing: border-box;
+}
+
+
+.page.cv .col-right .content > h1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 8px;
+}
+
+.page.cv .col-right .content h2 {
+    font-size: var(--font-size-normal);
+}
+
+.page.cv .col-right .content > .description {
+    padding-left: 24px;
+}
+
+
+.page.cv .col-right .content ul {
+    margin: 0;
+    list-style-type: disc;
+}
+
+.col-right .footer {
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 32px;
+    width: calc(100% - 64px);
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-content: space-between;
+    flex-direction: row;
+    align-self: flex-end;
+}
